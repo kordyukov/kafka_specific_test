@@ -1,0 +1,54 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: "Specifications"
+  sql:
+    init:
+      platform: postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        enable_lazy_load_no_trans: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/headof
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+    maximum-pool-size: 10
+  liquibase:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/headof
+    user: postgres
+    password: postgres
+    change-log: classpath:db/changelog/changelog-master.xml
+  kafka:
+#    enable: true
+#    bootstrap-servers: localhost:9092
+#    properties:
+#      security:
+#        protocol: SASL_SSL
+#      sasl:
+#        mechanism: SCRAM-SHA-512
+#        jaas.config: 'org.apache.kafka.common.security.scram.ScramLoginModule required username="${kafka_ssl_jaasConfig_username}"password="${kafka_ssl_jaasConfig_password}";'
+#    ssl:
+#      protocol: TLSv1.2
+#      key-store-type: JKS
+#      key-store-location: classpath:cert/client.truststore.jks
+#      key-store-password: qwe123
+#      trust-store-location: classpath:cert/client.truststore.jks
+#      trust-store-password: qwe123
+#      verify-hostname: false
+    consumer:
+      group-id: "usersX"
+      auto-offset-reset: earliest
+    topic-names:
+      input:
+        users: kafka_topic_users_new
+
+logging:
+  level:
+    root: INFO

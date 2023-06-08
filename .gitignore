@@ -1,0 +1,9 @@
+# Project exclude paths
+/Specification_consumer/.gradle/
+/Specification_consumer/build/
+/Specification_consumer/build/classes/java/main/
+/Specification_consumer/build/classes/java/test/
+/Specification_producer/.gradle/
+/Specification_producer/build/
+/Specification_producer/build/classes/java/main/
+/Specification_producer/build/classes/java/test/
