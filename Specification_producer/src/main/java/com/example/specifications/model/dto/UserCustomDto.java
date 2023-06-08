@@ -7,7 +7,6 @@ import lombok.Value;
 @Data
 @AllArgsConstructor
 public class UserCustomDto {
-
     private String firstName;
     private String lastName;
     private String email;

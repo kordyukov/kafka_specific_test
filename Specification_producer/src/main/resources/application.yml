@@ -23,13 +23,13 @@ spring:
 #      verify-hostname: false
     topic-names:
       output:
-        users-action: kafka_topic_users_nex
+        users-action: kafka_topic_users_new
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       acks: 1
     consumer:
-      group-id: usersNew
+      group-id: usersX
       auto-offset-reset: earliest
 
 logging:
