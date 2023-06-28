@@ -1,12 +1,8 @@
 package com.example.specifications.service;
 
-import com.example.specifications.filter.UserSpecification;
-import com.example.specifications.model.entity.UserCustom;
-
-import java.util.List;
+import com.example.specifications.model.dto.SignupRequest;
+import com.example.specifications.model.entity.User;
 
 public interface UserService {
-    List<UserCustom> findAll(UserSpecification spec);
-
-    UserCustom save(UserCustom userCustom);
+    User registerUser(SignupRequest signUpRequest);
 }

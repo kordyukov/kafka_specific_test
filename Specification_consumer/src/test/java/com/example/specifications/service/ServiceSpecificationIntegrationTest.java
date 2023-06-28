@@ -5,7 +5,7 @@ import com.example.specifications.filter.SearchOperation;
 import com.example.specifications.filter.SpecSearchCriteria;
 import com.example.specifications.filter.UserSpecification;
 import com.example.specifications.model.entity.UserCustom;
-import com.example.specifications.repository.UserRepository;
+import com.example.specifications.repository.UserCustomRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.isIn;
 public class ServiceSpecificationIntegrationTest implements AbstractServiceTest {
 
     @Autowired
-    private UserRepository repository;
+    private UserCustomRepository repository;
     private UserCustom userCustomJohn;
     private UserCustom userCustomTom;
 

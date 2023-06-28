@@ -1,6 +1,15 @@
 server:
-  port: 8081
+  port: 8082
+
 spring:
+  #  jackson:
+  #    deserialization:
+  #      FAIL_ON_UNKNOWN_PROPERTIES: false
+  #    serialization:
+  #      WRITE_DATES_AS_TIMESTAMPS: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   application:
     name: "Specifications"
   sql:
@@ -48,6 +57,10 @@ spring:
     topic-names:
       input:
         users: kafka_topic_users_new
+knf:
+  app:
+    jwtExpirationMs: 76300000
+    jwtSecret: YTQ1NjgwOTE5NDQyZDM5ODc5YzZhMzgxMjUyNDI5Mzk5MTUxMjcwOWQ4NGE1OGVlZTQzOWJkMmMzOTJmZmEwYmVlOTBmZGY4MGY1MzE2MjRhMzFiNThlNzZiYTMxNzEwMDhlNWQ1OTA0YmM1ZjU3NDlkOWIwZjM2NmM5ODVjMTI=
 
 logging:
   level:
